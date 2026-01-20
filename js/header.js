@@ -88,7 +88,7 @@ this.innerHTML = `
 
                       <div class="mega-col">
                         <h4>Consulting</h4>
-                        <a href="odoo-consulting.html">Odoo Consulting</a>
+                        <a href="odoo_consulting.html">Odoo Consulting</a>
                         <a href="odoo-ecommerce.html">Odoo E-commerce</a>
                       </div>
 
