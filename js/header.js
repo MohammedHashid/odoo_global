@@ -89,24 +89,24 @@ this.innerHTML = `
                       <div class="mega-col">
                         <h4>Consulting</h4>
                         <a href="odoo_consulting.html">Odoo Consulting</a>
-                        <a href="odoo-ecommerce.html">Odoo E-commerce</a>
+                        <a href="odoo_ecommerce.html">Odoo E-commerce</a>
                       </div>
 
                       <div class="mega-col">
                         <h4>Implementation</h4>
-                        <a href="odoo-integration.html">Odoo Integration</a>
-                        <a href="odoo-implementation.html">Odoo Implementation</a>
-                        <a href="odoo-customization.html">Odoo Customization</a>
-                        <a href="odoo-development.html">Odoo Development</a>
-                        <a href="odoo-configuration.html">Odoo Configuration</a>
-                        <a href="odoo-offshore.html">Odoo Offshore Development</a>
+                        <a href="odoo_integration.html">Odoo Integration</a>
+                        <a href="odoo_implementation.html">Odoo Implementation</a>
+                        <a href="odoo_customization.html">Odoo Customization</a>
+                        <a href="odoo_development.html">Odoo Development</a>
+                        <a href="odoo_configuration.html">Odoo Configuration</a>
+                        <a href="odoo_offshore_development.html">Odoo Offshore Development</a>
                       </div>
 
                       <div class="mega-col">
                         <h4>Support</h4>
-                        <a href="odoo-support.html">Odoo Support</a>
-                        <a href="odoo-migration.html">Odoo Migration</a>
-                        <a href="odoo-maintenance.html">Odoo Maintenance</a>
+                        <a href="odoo_support.html">Odoo Support</a>
+                        <a href="odoo_migration.html">Odoo Migration</a>
+                        <a href="odoo_maintenance.html">Odoo Maintenance</a>
                       </div>
 
                     </div>
