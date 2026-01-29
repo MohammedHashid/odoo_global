@@ -304,7 +304,7 @@ this.innerHTML = `
     <nav class="menu-box">
       <div class="nav-logo">
         <a href="index.html">
-          <img src="images/logo.png" style="width:150px;height:auto;">
+          <img src="images/odoo/Oodo Global Logo.png" style="width:150px;height:auto;">
         </a>
       </div>
       <div class="menu-outer"></div>
