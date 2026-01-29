@@ -1,29 +1,57 @@
 <?php
 
-// Define some constants
-define( "RECIPIENT_NAME", "John Doe" );
-define( "RECIPIENT_EMAIL", "youremail@mail.com" );
+// ===============================
+// Oodo Global - Contact Form Mailer
+// ===============================
 
-// Read the form values
-$success = false;
-$userName = isset( $_POST['username'] ) ? preg_replace( "/[^\s\S\.\-\_\@a-zA-Z0-9]/", "", $_POST['username'] ) : "";
-$senderPhone = isset( $_POST['phone'] ) ? preg_replace( "/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['phone'] ) : "";
-$message = isset( $_POST['message'] ) ? preg_replace( "/(From:|To:|BCC:|CC:|Subject:|Content-Type:)/", "", $_POST['message'] ) : "";
+define("RECIPIENT_EMAIL", "info@prajai.com");
 
-// If all values exist, send the email
-if ( $userName && $senderPhone && $message) {
-  $recipient = RECIPIENT_NAME . " <" . RECIPIENT_EMAIL . ">";
-  $headers = "From: " . $userName . "";
-  $msgBody = " Name: ". $userName .  " Phone: ". $senderPhone . " Message: " . $message . "";
-  $success = mail( $recipient, $headers, $msgBody );
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-  //Set Location After Successsfull Submission
-  header('Location: contact.html?message=Successfull');
+    $userName    = isset($_POST['username']) ? strip_tags(trim($_POST['username'])) : "";
+    $senderPhone = isset($_POST['phone']) ? strip_tags(trim($_POST['phone'])) : "";
+    $senderEmail = isset($_POST['email']) ? filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL) : "";
+    $industry    = isset($_POST['industry']) ? strip_tags(trim($_POST['industry'])) : "";
+    $message     = isset($_POST['message']) ? strip_tags(trim($_POST['message'])) : "";
+
+    if (!empty($userName) && !empty($senderPhone) && !empty($senderEmail)) {
+
+        if (!filter_var($senderEmail, FILTER_VALIDATE_EMAIL)) {
+            header("Location: contact.html?message=InvalidEmail");
+            exit;
+        }
+
+        $subject = "New Inquiry - Oodo Global Website";
+
+        $emailContent  = "New Website Inquiry\n";
+        $emailContent .= "---------------------------------\n";
+        $emailContent .= "Name     : $userName\n";
+        $emailContent .= "Phone    : $senderPhone\n";
+        $emailContent .= "Email    : $senderEmail\n";
+        $emailContent .= "Industry : $industry\n";
+        $emailContent .= "---------------------------------\n\n";
+        $emailContent .= "Message:\n$message\n";
+
+        // IMPORTANT: From must be your domain email (Hostinger requirement)
+        $headers  = "From: info@prajai.com\r\n";
+        $headers .= "Reply-To: $senderEmail\r\n";
+        $headers .= "X-Mailer: PHP/" . phpversion();
+
+        if (mail(RECIPIENT_EMAIL, $subject, $emailContent, $headers)) {
+            header("Location: contact.html?message=Success");
+            exit;
+        } else {
+            header("Location: contact.html?message=Failed");
+            exit;
+        }
+
+    } else {
+        header("Location: contact.html?message=MissingFields");
+        exit;
+    }
+
+} else {
+    header("Location: contact.html");
+    exit;
 }
-
-else{
-	//Set Location After Unsuccesssfull Submission
-  	header('Location: contact.html?message=Failed');	
-}
-
 ?>

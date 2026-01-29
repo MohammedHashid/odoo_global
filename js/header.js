@@ -82,7 +82,7 @@ this.innerHTML = `
 
                 <!-- Services Mega Menu -->
                 <li class="dropdown mega-dropdown">
-                  <a href="/case.html">Services</a>
+                  <a href="/services.html">Services</a>
                   <div class="mega-menu">
                     <div class="mega-inner">
 
@@ -116,7 +116,7 @@ this.innerHTML = `
                 <!-- Apps Mega Menu -->
                 <!-- Apps Mega Menu -->
                 <li class="dropdown mega-dropdown">
-                  <a href="#">Apps</a>
+                  <a href="apps.html">Apps</a>
                   <div class="mega-menu">
                     <div class="mega-inner">
 
