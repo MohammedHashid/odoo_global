@@ -215,7 +215,7 @@ this.innerHTML = `
 
                 <!-- Industries Mega Menu -->
                 <li class="dropdown mega-dropdown">
-                  <a href="#">Industries We Cater</a>
+                  <a href="industries.html">Industries We Cater</a>
                   <div class="mega-menu">
                     <div class="mega-inner">
 

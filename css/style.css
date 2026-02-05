@@ -2693,7 +2693,7 @@
 	-webkit-transition:all 300ms ease;
 	-ms-transition:all 300ms ease;
 	-o-transition:all 300ms ease;
-	background: linear-gradient(167.05deg, rgba(29, 44, 56, 0) 9.35%, rgba(29, 44, 56, 0.9) 84.84%);
+	/* background: linear-gradient(167.05deg, rgba(29, 44, 56, 0) 9.35%, rgba(29, 44, 56, 0.9) 84.84%); */
 }
 
 .gallery-two_block-inner:hover .gallery-two_block-image::before{
