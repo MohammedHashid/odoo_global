@@ -1108,7 +1108,7 @@
 
 .team-one{
 	position: relative;
-	padding: 0px 0px 70px;
+	padding: 10px 0px 70px;
 }
 
 .team-one .sec-title{
@@ -6217,3 +6217,8 @@ body {
   }
 }
 
+.service-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}

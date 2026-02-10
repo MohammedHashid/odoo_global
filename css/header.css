@@ -725,10 +725,10 @@
 .header-phone_icon{
 	position: absolute;
 	left: 0px;
-	top: 13px;
+	/* top: 13px; */
 	font-family: "Flaticon";
 	font-size: var(--font-30);
-	color: #1b1f53;;
+	color: aquamarine;;
 	transition:all 500ms ease;
 	-moz-transition:all 500ms ease;
 	-webkit-transition:all 500ms ease;
