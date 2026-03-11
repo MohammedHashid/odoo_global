@@ -548,7 +548,7 @@ a{
 p{
 	position:relative;
 	font-size:var(--font-16);
-	color: white;
+    color: var(--white-color); 
 	
 }
 
