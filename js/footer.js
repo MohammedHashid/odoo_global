@@ -1,137 +1,165 @@
 class SiteFooter extends HTMLElement {
-  connectedCallback() {
-    this.innerHTML = `<!-- CTA One -->
-    <section class="cta-one style-two">
-      <div class="auto-container">
-        <div class="d-flex justify-content-between align-items-center flex-wrap">
-          <!-- CTA Logo -->
-          <div style="width:290px; height:120px; display:flex; align-items:center; justify-content:center;">
-            <img src="images/odoo/Oodo Global Logo - White.png" alt="Oodo Global Logo" style="max-width:100%; max-height:100%; object-fit:contain;">
+connectedCallback() {
+this.innerHTML = `
+
+ <!-- Scroll To Top -->
+  <div class="scroll-to-top scroll-to-target" data-target="html">
+    <span class="fas fa-arrow-up fa-fw"></span>
+  </div>
+
+<!-- WhatsApp Floating Button -->
+  <div class="whatsapp-float">
+  <a href="https://wa.me/919363608990" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
+
+
+<!-- CTA SECTION -->
+<section class="footer-cta">
+  <div class="auto-container">
+    <div class="footer-cta-inner">
+
+      <div class="cta-logo">
+        <img src="images/odoo/Oodo Global Logo - White.png" alt="Oodo Global Logo">
+      </div>
+
+      <div class="cta-content">
+        <h3>Transform Your Business with Odoo ERP</h3>
+        <p>Expert Odoo consulting, implementation, customization and support services tailored for your business growth.
+        </p>
+      </div>
+
+      <div class="cta-button">
+        <a href="contact.html" class="footer-consult-btn">Get Free Consultation</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- MAIN FOOTER -->
+<footer class="main-footer">
+  <div class="auto-container">
+    <div class="row clearfix">
+
+      <!-- COMPANY INFO -->
+      <div class="footer-column col-lg-4 col-md-12 col-sm-12">
+        <div class="footer-widget about-widget">
+
+          <div class="footer-logo">
+            <img src="images/odoo/Oodo Global Logo - White.png" alt="Oodo Global">
           </div>
-          <!-- Info Text -->
-          <div class="cta-one_text">
-            2nd Floor, Vayaluran Towers, RS Puram<br />
-            Coimbatore, Tamil Nadu - 641002
+
+          <div class="footer-text">
+            Oodo Global is a trusted Odoo ERP solutions provider helping businesses streamline operations with expert
+            consulting, implementation, customization, and support services.
           </div>
+
+          <ul class="footer-social">
+            <li><a href="#"><span class="fab fa-linkedin"></span></a></li>
+            <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+            <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+            <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+          </ul>
+
         </div>
       </div>
-    </section>
-    <!-- End CTA One -->
 
-    <!-- Main Footer -->
-    <footer class="main-footer">
-      <div class="auto-container">
-        <!--Widgets Section-->
-        <div class="main-footer_widgets">
-          <div class="row clearfix">
-            <!--big column-->
-            <div class="big-column col-lg-7 col-md-12 col-sm-12">
-              <div class="row clearfix">
-                <!--Footer Column-->
-                <div class="main-footer_column col-lg-7 col-md-6 col-sm-12">
-                  <div class="footer-widget subscribe-widget">
-                    <h5 class="main-footer_title">Subscribe to Our Newsletter</h5>
-                    <div class="footer-text">
-                      Stay updated with the latest Odoo insights, tips, and product releases.
-                    </div>
-                    <!-- Subscribe Form -->
-                    <div class="subscribe-form">
-                      <form method="post" action="contact.html">
-                        <div class="form-group">
-                          <input type="email" name="email" value="" placeholder="Enter your email" required />
-                          <button type="submit" class="theme-btn fa-solid fa-arrow-right fa-fw"></button>
-                        </div>
-                      </form>
-                    </div>
-                    <div class="footer-privacy">
-                      Our <a href="#">Privacy Policy</a> and provide consent
-                      to receive updates from our company.
-                    </div>
-                  </div>
-                </div>
 
-                <!--Footer Column-->
-                <div class="main-footer_column col-lg-5 col-md-6 col-sm-12">
-                  <div class="footer-widget links-widget">
-                    <h4 class="main-footer_title">Our Services</h4>
-                    <ul class="main-footer_list">
-                      <li><a href="odoo-consulting.html">Odoo Consulting</a></li>
-                      <li><a href="odoo-implementation.html">Odoo Implementation</a></li>
-                      <li><a href="odoo-customization.html">Odoo Customization</a></li>
-                      <li><a href="odoo-support.html">Odoo Support</a></li>
-                      <li><a href="odoo-migration.html">Odoo Migration</a></li>
-                      <li><a href="odoo-integration.html">Odoo Integration</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!--big column-->
-            <div class="big-column col-lg-5 col-md-12 col-sm-12">
-              <div class="row clearfix">
-                <!--Footer Column-->
-                <div class="main-footer_column col-lg-5 col-md-6 col-sm-12">
-                  <div class="footer-widget links-widget">
-                    <h4 class="main-footer_title">Quick Links</h4>
-                    <ul class="main-footer_list">
-                      <li><a href="index.html">Home</a></li>
-                      <li><a href="about.html">About Us</a></li>
-                      <li><a href="#">Services</a></li>
-                      <li><a href="#">Industries</a></li>
-                      <li><a href="#">Case Studies</a></li>
-                      <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                  </div>
-                </div>
-
-                <!--Footer Column-->
-                <div class="main-footer_column col-lg-7 col-md-6 col-sm-12">
-                  <div class="footer-widget contact-widget">
-                    <h4 class="main-footer_title">Contact Info</h4>
-                    <div class="footer-contact-info">
-                      <div class="footer-contact-item">
-                        <span class="icon fa fa-phone"></span>
-                        <div class="text">
-                          <strong>Phone:</strong><br>
-                          <a href="tel:+919363608990">+91-93636 08990</a>
-                        </div>
-                      </div>
-                      <div class="footer-contact-item">
-                        <span class="icon fa fa-envelope"></span>
-                        <div class="text">
-                          <strong>Email:</strong><br>
-                          <a href="mailto:info@prajai.com">info@prajai.com</a>
-                        </div>
-                      </div>
-                      <div class="footer-contact-item">
-                        <span class="icon fa fa-map-marker-alt"></span>
-                        <div class="text">
-                          <strong>Address:</strong><br>
-                          2nd Floor, Vayaluran Towers<br>
-                          RS Puram, Coimbatore<br>
-                          Tamil Nadu - 641002
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <!-- SERVICES -->
+      <div class="footer-column col-lg-3 col-md-6 col-sm-12">
+        <div class="footer-widget links-widget">
+          <h4 class="footer-title">Our Services</h4>
+          <ul class="footer-links">
+            <li><a href="odoo_consulting.html">Odoo Consulting</a></li>
+            <li><a href="odoo_implementation.html">Odoo Implementation</a></li>
+            <li><a href="odoo_customization.html">Odoo Customization</a></li>
+            <li><a href="odoo_integration.html">Odoo Integration</a></li>
+            <li><a href="odoo_migration.html">Odoo Migration</a></li>
+            <li><a href="odoo_support.html">Odoo Support</a></li>
+          </ul>
         </div>
       </div>
-      <div class="footer-copyright">
-        <div class="auto-container">
-          <div class="copyright">
-            <a href="index.html">Oodo Global</a> &copy; ${new Date().getFullYear()} All Rights Reserved. Developed by <a href="https://prajai.com" target="_blank" style="color: #1b1f53; font-weight: 600;">Prajai Technology</a>
-          </div>
+
+
+      <!-- QUICK LINKS -->
+      <div class="footer-column col-lg-2 col-md-6 col-sm-12">
+        <div class="footer-widget links-widget">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
         </div>
       </div>
-    </footer>
-    <!-- End Main Footer -->
+
+
+      <!-- CONTACT -->
+      <div class="footer-column col-lg-3 col-md-12 col-sm-12">
+        <div class="footer-widget contact-widget">
+
+          <h4 class="footer-title">Contact Us</h4>
+
+          <ul class="footer-contact">
+
+            <li>
+              <span class="icon fa fa-map-marker-alt"></span>
+              2nd Floor, Vayaluran Towers<br>
+              RS Puram, Coimbatore<br>
+              Tamil Nadu - 641002
+            </li>
+
+            <li>
+              <span class="icon fa fa-phone"></span>
+              <a href="tel:+919363608990">+91 93636 08990</a>
+            </li>
+
+            <li>
+              <span class="icon fa fa-envelope"></span>
+              <a href="mailto:info@prajai.com">info@prajai.com</a>
+            </li>
+
+          </ul>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- COPYRIGHT -->
+  <div class="footer-bottom">
+    <div class="auto-container">
+      <div class="footer-bottom-inner">
+
+        <div class="copyright">
+          © ${new Date().getFullYear()} Oodo Global. All Rights Reserved.
+        </div>
+
+        <div class="footer-policy">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+
+        <div class="developer">
+          Developed by
+          <a href="https://prajai.com" target="_blank">Prajai Technology</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</footer>
+
 `;
-  }
+}
 }
 
 customElements.define('site-footer', SiteFooter);

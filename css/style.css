@@ -3635,7 +3635,7 @@
 
 .service-block_two-content{
 	position: relative;
-	padding: 22px 35px;
+	padding: 22px 60px;
 	margin-top: -40px;
 	z-index: 10;
 	margin-left: var(--margin-left-30);
@@ -4088,6 +4088,7 @@
 	color: var(--color-three);
 	font-size: var(--font-16);
 }
+
 
 /***
 
